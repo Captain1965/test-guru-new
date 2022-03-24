@@ -42,4 +42,4 @@ yarn-debug.log*
 .yarn-integrity
 
 # Ignore login and password type database
-/config/*database.yml
+
