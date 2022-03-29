@@ -21,6 +21,7 @@ question = Question.create!([{ body: 'List the names of the printing methods?', 
                              { body: 'How to launch the rails console', test_id: test[2].id }])
 Answer.create!([{ body: 'I known methods : puts, print, p, pp, ap', correct: true, question_id: question[0].id },
                 { body: 'I known methods : puts, print, chomp', correct: false, question_id: question[0].id },
-                { body: 'The method converts the argument to the string type', correct: true, question_id: question[1].id }, { body: 'The method converts the argument to the integer type', correct: false, question_id: question[1].id },
+                { body: 'The method converts the argument to the string type', correct: true, question_id: question[1].id },
+                { body: 'The method converts the argument to the integer type', correct: false, question_id: question[1].id },
                 { body: 'The commad is rails c', correct: true, question_id: question[2].id },
                 { body: 'The commad is rails s', correct: false, question_id: question[2].id }])
