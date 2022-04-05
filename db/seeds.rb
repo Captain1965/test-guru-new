@@ -13,15 +13,17 @@ category = Category.create!([{ title: 'Frontend' },
                              { title: 'Backend' },
                              { title: 'Other' }])
 
-tests = Test.create!([{ title: 'Ruby', level: 2, category_id: category[0].id, author_id: user[0].id },
-                      { title: 'Ruby', level: 3, category_id: category[0].id, author_id: user[0].id },
-                      { title: 'Rails', level: 2, category_id: category[1].id, author_id: user[1].id }])
-question = Question.create!([{ body: 'List the names of the printing methods?', test_id: test[1].id },
-                             { body: 'What is mean method to_s?', test_id: test[0].id },
-                             { body: 'How to launch the rails console', test_id: test[2].id }])
-Answer.create!([{ body: 'I known methods : puts, print, p, pp, ap', correct: true, question_id: question[0].id },
-                { body: 'I known methods : puts, print, chomp', correct: false, question_id: question[0].id },
-                { body: 'The method converts the argument to the string type', correct: true, question_id: question[1].id },
-                { body: 'The method converts the argument to the integer type', correct: false, question_id: question[1].id },
-                { body: 'The commad is rails c', correct: true, question_id: question[2].id },
-                { body: 'The commad is rails s', correct: false, question_id: question[2].id }])
+test = Test.create!([{ title: 'Ruby', level: 2, category: category[0], author: user[0] },
+                      { title: 'Ruby', level: 3, category: category[0], author: user[0] },
+                      { title: 'Rails', level: 2, category: category[1], author: user[1] }])
+
+question = Question.create!([{ body: 'List the names of the printing methods?', test: test[1] },
+                             { body: 'What is mean method to_s?', test: test[0] },
+                             { body: 'How to launch the rails console', test: test[2] }])
+
+Answer.create!([{ body: 'I known methods : puts, print, p, pp, ap', correct: true, question: question[0] },
+                { body: 'I known methods : puts, print, chomp', correct: false, question: question[0] },
+                { body: 'The method converts the argument to the string type', correct: true, question: question[1] },
+                { body: 'The method converts the argument to the integer type', correct: false, question: question[1] },
+                { body: 'The commad is rails c', correct: true, question: question[2] },
+                { body: 'The commad is rails s', correct: false, question: question[2] }])
