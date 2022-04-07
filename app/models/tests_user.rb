@@ -1,4 +1,4 @@
 class TestsUser < ApplicationRecord
-  has_many :tests, dependent: :destroy
-  has_many :users, dependent: :destroy
+  belongs_to: test
+  belongs_to: user
 end
