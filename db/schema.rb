@@ -17,8 +17,7 @@ ActiveRecord::Schema.define(version: 2022_03_29_171044) do
 
   create_table "answers", force: :cascade do |t|
     t.text "body", null: false
-    t.text "correct", default: "f"
-    t.text "boolean", default: "f"
+    t.boolean "correct", default: false
     t.bigint "question_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -62,6 +61,7 @@ ActiveRecord::Schema.define(version: 2022_03_29_171044) do
   create_table "users", force: :cascade do |t|
     t.string "login", limit: 10, null: false
     t.string "password"
+    t.string "email", limit: 20
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
