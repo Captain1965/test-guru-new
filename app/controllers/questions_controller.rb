@@ -20,12 +20,16 @@ class QuestionsController < ApplicationController
     if @question.save
       redirect_to @question
     else
-      render new
+      render "new"
     end
   end
 
   def destroy
     @question.destroy
+  end
+
+  def edit
+    find_question
   end
 
   private
@@ -40,6 +44,7 @@ class QuestionsController < ApplicationController
 
   def find_question
     @question = Question.find(params[:id])
+
   end
 
   def rescue_question_with_not_found

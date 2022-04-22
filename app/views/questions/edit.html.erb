@@ -1,4 +1,15 @@
-<form action="/questions" method="DESTROY"> 
-	<h3>"Question"</h3>
-	<input type="submit"/ value="delete">
-</form>
+<h1>Questions</h1>
+
+<table>
+ <p>
+   <%= @question.body %>
+   <br>
+    	
+  </p>
+  
+  	<tr>
+  		<p><%= @question.id %></p>
+  		<p><%= @question.body %></p>
+   		<p><%= link_to "Edit", @question </p>
+  	</tr>
+  
