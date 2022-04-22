@@ -2,14 +2,10 @@
 
 <table>
  <p>
-   <%= @question.body %>
-   <br>
-    	
-  </p>
-  
   	<tr>
-  		<p><%= @question.id %></p>
-  		<p><%= @question.body %></p>
-   		<p><%= link_to "Edit", @question </p>
+  		<p>Question id : <%= @question.id %></p>
+  		<p>Question body : <%= @question.body %></p>
+      <p><%= link_to "Delete", @question, method: :delete %></p>
   	</tr>
+  <body>
   

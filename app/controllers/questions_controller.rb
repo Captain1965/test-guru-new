@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
 
-  before_action :find_test, only: %i[index new create]
+  before_action :find_test, only: %i[index new create ]
   before_action :find_question, only: %i[destroy]
 
   def index
@@ -9,7 +9,7 @@ class QuestionsController < ApplicationController
   end
 
   def show
-    render inline: 'Question : <%= Question.find(params[:id]) %>'
+    render inline: 'Question : <%= Question.find(params[:id])%> id : <%= params[:id]%>'
   end
 
   def new
@@ -20,12 +20,14 @@ class QuestionsController < ApplicationController
     if @question.save
       redirect_to @question
     else
-      render "new"
+      render :new
     end
   end
 
   def destroy
+    test = @question.test
     @question.destroy
+    redirect_to test_questions_path(test)
   end
 
   def edit
