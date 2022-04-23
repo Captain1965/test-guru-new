@@ -1,7 +1,7 @@
 class QuestionsController < ApplicationController
 
   before_action :find_test, only: %i[index new create ]
-  before_action :find_question, only: %i[destroy]
+  before_action :find_question, only: %i[destroy edit]
 
   def index
     render inline: 'Questions for the test N <%= params[:test_id] %>
@@ -25,13 +25,11 @@ class QuestionsController < ApplicationController
   end
 
   def destroy
-    test = @question.test
     @question.destroy
-    redirect_to test_questions_path(test)
+    redirect_to @question.test
   end
 
   def edit
-    find_question
   end
 
   private
