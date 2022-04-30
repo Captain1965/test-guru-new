@@ -10,11 +10,9 @@ class TestsController < ApplicationController
   end
 
   def edit
-    #@test = test_find
   end
 
   def new
-
     @test = Test.new
   end
 
