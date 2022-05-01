@@ -1,12 +1,12 @@
 class TestsController < ApplicationController
-  before_action :tests_find, only: %i[index new show edit]
+  before_action :tests_find, only: %i[index ]#@new show edit]
   before_action :test_find, only: %i[show edit destroy update]
 
   def index
   end
 
   def show
-    @questions = test_find.questions
+    @questions = @test.questions
   end
 
   def edit
@@ -34,7 +34,6 @@ class TestsController < ApplicationController
   end
 
   def destroy
-    @test = test_find
     @test.destroy
     redirect_to tests_path
   end
