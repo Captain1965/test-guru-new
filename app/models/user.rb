@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   has_many :created_tests, class_name:"tests", dependent: :destroy, foreign_key: "author_id"
-  has_many :tests_users, dependent: :destroy
-  has_many :tests, through: :tests_users
+  has_many :test_passages
+  has_many :tests, through: :test_passages
 
   validates :email, presence: true
 
