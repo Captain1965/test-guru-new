@@ -1,6 +1,6 @@
  class TestPassage < ApplicationRecord
 
-  CHECK_RESULT = 85.freeze
+  CHECK_RESULT = 85
 
   belongs_to :user
   belongs_to :test
