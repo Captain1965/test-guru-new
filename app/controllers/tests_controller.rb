@@ -1,7 +1,5 @@
 class TestsController < ApplicationController
-  #before_action :tests_find, only: %i[index]
   before_action :test_find, only: %i[show edit destroy update start]
-  #before_action :user_find, only: :start
 
   def index
     tests_find
