@@ -1,0 +1,16 @@
+<table>
+	<p>
+		<%= link_to 'Question new', admin_new_test_question_path(@test) %>	
+	</p>
+	<% @questions.each do |question| %>
+		<tr>
+			<td><%= question.body %></td><br>
+			<td><%= link_to 'Show', admin_edit_question_path(question) %></td>
+			<td><%= link_to 'Edit', admin_edit_question_path(question) %></td>
+			<td><%= link_to 'Delete',
+                  admin_question_path(question),
+                  method: :delete,
+                  data: {confirm: 'Yuo sure?'} %></td>
+		</tr>			
+	<% end %>	
+</table>

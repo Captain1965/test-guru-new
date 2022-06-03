@@ -1,55 +1,21 @@
 class TestsController < ApplicationController
 
   before_action :authenticate_user!
-  before_action :test_find, only: %i[show edit destroy update start]
+
+  rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_test_not_found
 
   def index
     tests_find
   end
 
-  def show
-    @questions = @test.questions
-  end
-
-  def edit; end
-
-  def new
-    @test = Test.new
-  end
-
-  def create
-    @test = Test.new(test_params)
-    if @test.save
-      redirect_to @test
-    else
-      render :new
-    end
-   end
-
-  def update
-    if @test.update(test_params)
-      redirect_to @test
-    else
-      render :edit
-    end
-  end
-
-  def destroy
-    @test.destroy
-    redirect_to tests_path
-  end
-
   def start
-    user_find
-    @user.tests.push(@test)
-    redirect_to @user.test_passage(@test)
+    test_find
+    #user_find
+    current_user.tests.push(@test)
+    redirect_to current_user.test_passage(@test)
   end
 
   private
-
-  def test_params
-    params.require(:test).permit(:title, :level, :category_id, :author_id)
-  end
 
   def tests_find
     @tests = Test.all
@@ -61,5 +27,9 @@ class TestsController < ApplicationController
 
   def user_find
     @user = User.first
+  end
+
+  def rescue_with_test_not_found
+    render plain: 'Test not found'
   end
 end

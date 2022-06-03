@@ -1,39 +1,40 @@
-class QuestionsController < ApplicationController
+class Admin::QuestionsController < Admin::BaseController
+
+  before_action :authenticate_user!
   before_action :find_test, only: %i[index create new]
   before_action :find_question, only: %i[show destroy edit update]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
-  def show
-  end
+  def show; end
 
   def new
     @question = Question.new
   end
 
   def create
-    @question = @test.questions.build(question_params)
+    @question = @test.questions.new(question_params)
+
     if @question.save
-      redirect_to @question
+      redirect_to [:admin, @question]
     else
       render :new
     end
   end
 
-  def destroy
-    @question.destroy
-    redirect_to @question.test
-  end
-
-  def edit
-  end
+  def edit; end
 
   def update
     if @question.update(question_params)
-      redirect_to @question
+      redirect_to [:admin, @question]
     else
       render :edit
     end
+  end
+
+  def destroy
+    @question.destroy
+    redirect_to [:admin, @question.test]
   end
 
   private
