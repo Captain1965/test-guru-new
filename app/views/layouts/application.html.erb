@@ -13,11 +13,11 @@
 
     <% if user_signed_in? %>
       <p class="nav user" >
-        Welcome, <b><%= current_user.email %></b> 
+        Welcome, <b><%= current_user.first_name %></b> 
         <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
       </p>
      <% end %>
-      
+      <%= render 'shared/nav' %>
       <%= render 'shared/flash' %> 
 
     <%= yield %>

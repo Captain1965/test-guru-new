@@ -4,11 +4,10 @@
   <title>Admin Panel | TestGuru</title>
   <%= csrf_meta_tags %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%#= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag "/assets/application.js", "data-turbo-track": "reload", defer: true %>
 </head>
 
 <body>
-  <%= render 'admin/nav' %>
   <%= render 'shared/flash' %>
   <%= render 'shared/footer' %>
   <%= yield %>
