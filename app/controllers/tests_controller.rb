@@ -10,7 +10,6 @@ class TestsController < ApplicationController
 
   def start
     test_find
-    #user_find
     current_user.tests.push(@test)
     redirect_to current_user.test_passage(@test)
   end
