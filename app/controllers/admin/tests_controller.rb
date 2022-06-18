@@ -1,10 +1,10 @@
 class Admin::TestsController < ApplicationController
 
   before_action :authenticate_user!
-  before_action :test_find, only: %i[show edit destroy update start]
+  before_action :test_find, only: %i[show edit update destroy]
 
   def index
-    tests_find
+    @tests = Test.all
   end
 
   def show
@@ -45,15 +45,7 @@ class Admin::TestsController < ApplicationController
     params.require(:test).permit(:title, :level, :category_id, :author_id)
   end
 
-  def tests_find
-    @tests = Test.all
-  end
-
   def test_find
     @test = Test.find(params[:id])
-  end
-
-  def user_find
-    @user = User.first
   end
 end
