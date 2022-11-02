@@ -1,4 +1,4 @@
-<h2>Test <%= @test_passage.test.title %> passed!</h2>
+<h2><%= t('.header', title: @test_passage.test.title) %></h2>
 
 <% if @test_passage.success? %>
   <p>
@@ -9,4 +9,4 @@
     You result: <span class="unsuccessful"><%= @test_passage.percent_correct %></span>%. Try again.
   </p>
 <% end %>
-<%= link_to 'Try again', tests_path %>
+<%= link_to t('.again'), tests_path %>

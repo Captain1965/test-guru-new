@@ -20,7 +20,7 @@ class Admin::TestsController < ApplicationController
   def create
     @test = Test.new(test_params)
     if @test.save
-      redirect_to [:admin, @test]
+      redirect_to [:admin, @test], notice: t('.success')
     else
       render :new
     end
