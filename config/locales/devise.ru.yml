@@ -64,3 +64,8 @@ ru:
       not_saved:
         one: "%{resource}: сохранение не удалось из-за %{count} ошибки"
         other: "%{resource}: сохранение не удалось из-за %{count} ошибки"
+    shared:
+      links:
+        forgot_your_password: "Забыли пароль?"
+        did_not_receive_confirm_instructions: "Не получили письмо с подтверждением?"
+
