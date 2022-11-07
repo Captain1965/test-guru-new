@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Admin Panel | TestGuru</title>
-  <%= csrf_meta_tags %>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag "/assets/application.js", "data-turbo-track": "reload", defer: true %>
-</head>
+  <head>
+    <title>Admin Panel | TestGuru</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "/assets/application.js", "data-turbo-track": "reload", defer: true %>
+  </head>
 
-<body>
-  <%= render 'shared/flash' %>
-  <%= render 'shared/footer' %>
-  <%= yield %>
-</body>
+  <body>
+    <%= render 'shared/flash' %>
+    <%= render 'shared/footer' %>
+    <%= yield %>
+  </body>
 </html>

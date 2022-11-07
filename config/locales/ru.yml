@@ -6,19 +6,14 @@ ru:
       test:
         create: "Создать тест"
         update: "Обновить тест"
-
     label:
       test:
         title: "Название"
         level: "Уровень" 
         category_id: "Категория"
-
-
-
     collection_select:
       test:
-        catrgory_id:     
-        
+        catrgory_id: "Категория"       
 
   tests:
     index:
@@ -34,7 +29,6 @@ ru:
     result:
       header: "Тест %{title} успешно завершен!" 
       again: "Пройти снова "
-
     show:  
       pass: "Пройдите тест %{title} " 
       next: "Следующий"
@@ -45,8 +39,7 @@ ru:
         few: "Обнаружено %{count} ошибки "
         many: "Обнаружено %{count} ошибок "
         one:  "Обнаружена %{count} ошибка "
-        other: "Обнаружено %{count} ошибки "
-  
+        other: "Обнаружено %{count} ошибки "  
 
   admin:
     tests:
@@ -61,18 +54,14 @@ ru:
         back: "Назад" 
       edit: 
         edit_test: "Редактировать тест " 
-
       new:
-        test_create: "Создать тест"        
-
+        test_create: "Создать тест"  
       test:
         show: "Показать"
         edit: "Редактировать"
         delete: "Удалить"
-
       create:
         success: "Тест создан успешно" 
-
       show:
         edit: "Редактировать"          
         back: "Назад"
@@ -83,14 +72,8 @@ ru:
       form:
         back: "Назад"
         # body: "Содержание"  
-    
-
-
-
 
   tests_mailer:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!" 
-
-
       
