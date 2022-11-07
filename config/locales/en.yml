@@ -62,7 +62,6 @@ en:
         one:  "%{count} error detected"
         other: "%{count} errors detected"
 
-
   admin:
     tests:
       index:
@@ -75,24 +74,19 @@ en:
       edit: 
         edit_test: "Edit test"  
       new:
-        test_create: "Create test"
-        
+        test_create: "Create test"        
       show:
         title: "Title:"
-        level: "Level:"
-  
+        level: "Level:"  
       test:
         show: "Show"
         edit: "Edit"
         delete: "Delete"
-
       create:
         success: "Test create successfully" 
-
       show:
         edit: "Edit"          
-        back: "Back"
- 
+        back: "Back" 
 
   tests_mailer:
     completed_test:

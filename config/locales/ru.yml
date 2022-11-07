@@ -67,11 +67,10 @@ ru:
         back: "Назад"
         title: "Название"
         level: "Уровень"
-
     questions:
       form:
         back: "Назад"
-        # body: "Содержание"  
+        body: "Содержание"  
 
   tests_mailer:
     completed_test:
