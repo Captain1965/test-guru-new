@@ -67,6 +67,7 @@ ru:
         back: "Назад"
         title: "Название"
         level: "Уровень"
+        
     questions:
       form:
         back: "Назад"
