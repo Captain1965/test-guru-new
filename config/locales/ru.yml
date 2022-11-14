@@ -1,6 +1,5 @@
 ru:
   hello: "Привет мир"
-
   helpers:
     submit:
       test:
@@ -13,8 +12,7 @@ ru:
         category_id: "Категория"
     collection_select:
       test:
-        catrgory_id: "Категория"       
-
+        catrgory_id: "Категория"
   tests:
     index:
       header: "Список тестов"
@@ -34,8 +32,7 @@ ru:
       next: "Следующий"      
     gist:
       success: " Gist успешно сохранен"  
-      failure: "Во время сохранения gist произошла ошибка"      
-
+      failure: "Во время сохранения gist произошла ошибка" 
   shared:
     errors:
       header:
@@ -44,8 +41,7 @@ ru:
         one:  "Обнаружена %{count} ошибка "
         other: "Обнаружено %{count} ошибки " 
     flash:
-      show: "Просмотреть Gist"
-      
+      show: "Просмотреть Gist"      
   admin:
     tests:
       index:
@@ -83,7 +79,6 @@ ru:
         question: "Вопрос"
         user: "Пользователь"  
         url: "Gist url"
-
   tests_mailer:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!" 
