@@ -43,3 +43,6 @@ yarn-debug.log*
 
 # Ignore login and password type database
 /*database.yml
+
+# Ignore Github token
+/.env

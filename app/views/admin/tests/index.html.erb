@@ -4,7 +4,6 @@
 	</div>	
 	<div class="col-12">
 		<%= link_to t('.new'), new_admin_test_path %>	
-
 		<table class="table table-striped">
 			<thead>		
 				<tr>
@@ -17,7 +16,8 @@
 			</thead>	
 			<tbody>	
 				<%= render @tests %>
-			</tbody>
-		</table> 
+			</tbody>			
+		</table>
+		<%= link_to t('.show_gist'), admin_gists_path, target: '_blank' %> 
 	</div>
 </div>

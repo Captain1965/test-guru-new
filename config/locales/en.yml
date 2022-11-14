@@ -54,13 +54,20 @@ en:
       again: "Try again"
     show:  
       pass: "Pass the test %{title} " 
-      next: "Next"      
+      next: "Next"
+    gist:
+      success: "Gist was successfully created"  
+      failure: "An error occured while saving gist" 
+      show: "Show Gist"
+     
 
   shared:
     errors:
       header:
         one:  "%{count} error detected"
         other: "%{count} errors detected"
+    flash:
+      show: "Views Gist"   
 
   admin:
     tests:
@@ -71,6 +78,7 @@ en:
         questions: "Questions"
         actions: "Actions"
         new: "Test new"
+        show_gist: "Show Gists"
       edit: 
         edit_test: "Edit test"  
       new:
@@ -87,7 +95,17 @@ en:
       show:
         edit: "Edit"          
         back: "Back" 
-
+    questions:
+      form:
+        back: "Back"
+        body: "Content"     
+    gists:
+      index:
+        header: "List of saved questions" 
+        question: "Вопрос"
+        user: "Пользователь"  
+        url: "Gist url"    
+        
   tests_mailer:
     completed_test:
       subject: "You just completed the TestGuru test!"   

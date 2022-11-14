@@ -31,7 +31,10 @@ ru:
       again: "Пройти снова "
     show:  
       pass: "Пройдите тест %{title} " 
-      next: "Следующий"
+      next: "Следующий"      
+    gist:
+      success: " Gist успешно сохранен"  
+      failure: "Во время сохранения gist произошла ошибка"      
 
   shared:
     errors:
@@ -39,7 +42,9 @@ ru:
         few: "Обнаружено %{count} ошибки "
         many: "Обнаружено %{count} ошибок "
         one:  "Обнаружена %{count} ошибка "
-        other: "Обнаружено %{count} ошибки "  
+        other: "Обнаружено %{count} ошибки " 
+    flash:
+      show: "Просмотреть Gist"
 
   admin:
     tests:
@@ -50,6 +55,7 @@ ru:
         questions: "Вопросы"
         actions: "Действия"
         new: "Новый тест"
+        show_gist: "Показать Gists"
       form: 
         back: "Назад" 
       edit: 
@@ -66,12 +72,17 @@ ru:
         edit: "Редактировать"          
         back: "Назад"
         title: "Название"
-        level: "Уровень"
-        
+        level: "Уровень"        
     questions:
       form:
         back: "Назад"
         body: "Содержание"  
+    gists:
+      index: 
+        header: "Список сохраненных вопросов"
+        question: "Вопрос"
+        user: "Пользователь"  
+        url: "Gist url"
 
   tests_mailer:
     completed_test:
