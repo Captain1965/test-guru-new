@@ -1,5 +1,6 @@
-class TestsMailerPreview < ActionMailer::Preview
+# frozen_string_literal: true
 
+class TestsMailerPreview < ActionMailer::Preview
   def completed_test
     test_passage = TestPassage.new(user: User.first, test: Test.first)
 

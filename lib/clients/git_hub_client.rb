@@ -1,19 +1,17 @@
+# frozen_string_literal: true
+
 class GitHubClient
-
   ROOT_ENDPOINT = 'https://api.github.com'
-
-  ACCESS_TOKEN = ENV['GITHUB_GIST_TOKEN']
 
   def initialize
     @http_client = setup_http_client
   end
 
   def create_gists(params)
-#byebug
-    @http_client.access_token = ACCESS_TOKEN
+    @http_client.access_token = ENV['GITHUB_GIST_TOKEN']
     begin
       @http_client.create_gist(params)
-    rescue
+    rescue StandardError
     end
   end
 

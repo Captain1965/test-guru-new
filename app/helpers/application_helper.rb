@@ -1,5 +1,6 @@
-module ApplicationHelper
+# frozen_string_literal: true
 
+module ApplicationHelper
   def current_year
     Date.current.year
   end

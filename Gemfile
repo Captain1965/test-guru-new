@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -25,12 +27,12 @@ gem 'devise', '~> 4.0'
 # LOCALIZATION
 gem 'rails-i18n', '~> 6.0.0'
 
-gem 'jquery-rails'
 gem 'bootstrap', '~> 5.1.2'
+gem 'jquery-rails'
 
 gem 'faraday'
 
-gem "octokit", "~> 5.0"
+gem 'octokit', '~> 5.0'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -39,7 +41,7 @@ gem "octokit", "~> 5.0"
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'pg'
 
-#Use ENV variable
+# Use ENV variable
 gem 'dotenv-rails'
 
 group :development, :test do
@@ -52,9 +54,9 @@ group :development do
   gem 'listen', '~> 3.2'
   gem 'web-console', '>= 3.3.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'letter_opener'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'letter_opener'
 end
 
 group :test do

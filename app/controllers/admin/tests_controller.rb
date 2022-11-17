@@ -1,5 +1,6 @@
-class Admin::TestsController < ApplicationController
+# frozen_string_literal: true
 
+class Admin::TestsController < ApplicationController
   before_action :authenticate_user!
   before_action :test_find, only: %i[show edit update destroy]
 
@@ -24,7 +25,7 @@ class Admin::TestsController < ApplicationController
     else
       render :new
     end
-   end
+  end
 
   def update
     if @test.update(test_params)

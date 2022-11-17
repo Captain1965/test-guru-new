@@ -1,5 +1,6 @@
-class GistQuestionService
+# frozen_string_literal: true
 
+class GistQuestionService
   def initialize(question, client: nil)
     @question = question
     @test = @question.test
@@ -13,7 +14,7 @@ class GistQuestionService
   private
 
   def gist_params
-    {:files => {"A question about #{@test.title} from TestGuru" => {:content => gist_content}}, :public => true }
+    { files: { "A question about #{@test.title} from TestGuru" => { content: gist_content } }, public: true }
   end
 
   def gist_content

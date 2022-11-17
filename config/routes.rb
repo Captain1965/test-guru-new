@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
 
- root 'tests#index'
+  root 'tests#index'
 
-  devise_for :users, path: :gurus, path_names: { sign_in: :login, sign_out: :logout}
+  devise_for :users, path: :gurus, path_names: { sign_in: :login, sign_out: :logout }
 
   resources :tests, only: :index do
     resources :questions, shallow: true, except: :index do

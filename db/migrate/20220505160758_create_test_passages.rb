@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateTestPassages < ActiveRecord::Migration[6.0]
   def change
     create_table :test_passages do |t|
@@ -9,4 +11,4 @@ class CreateTestPassages < ActiveRecord::Migration[6.0]
       t.timestamps
     end
   end
- end
+end
