@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class Admin::TestsController < ApplicationController
+
   before_action :authenticate_user!
   before_action :test_find, only: %i[show edit update destroy]
 

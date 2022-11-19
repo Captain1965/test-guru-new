@@ -34,7 +34,7 @@
      test.questions.order(:id).where('id < ?', current_question.id).count + 1
    end
 
-  private
+   private
 
    def before_validation_set_question
      self.current_question = next_question

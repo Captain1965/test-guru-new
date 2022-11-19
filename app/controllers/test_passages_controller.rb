@@ -18,7 +18,7 @@ class TestPassagesController < ApplicationController
     end
   end
 
- def gist
+  def gist
     result = GistQuestionService.new(@test_passage.current_question).call
     if result.gist_record.present?
       current_user.gists.create!(question: @test_passage.current_question,
@@ -31,7 +31,7 @@ class TestPassagesController < ApplicationController
     end
 
     redirect_to @test_passage
-  end
+   end
 
   private
 
