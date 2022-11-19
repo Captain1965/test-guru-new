@@ -58,7 +58,7 @@ en:
     gist:
       success: "Gist was successfully created"  
       failure: "An error occured while saving gist" 
-      show: "Show Gist"
+      view: "Show Gist"
      
 
   shared:

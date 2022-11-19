@@ -32,7 +32,6 @@ class Admin::AnswersController < Admin::BaseController
   end
 
   def destroy
-    # byebug
     @answer.destroy
     redirect_to [:admin, @answer.question]
   end
