@@ -2,11 +2,8 @@
 class GitHubClient
 
   def create_gists(params)
-    if ENV.fetch('GITHUB_GIST_TOKEN')
-      @http_client = setup_http_client.create_gist(params)
-    else
-      redirect_to @test_passage, notice: 'incorrect token Gist'
-    end
+      ENV.fetch('GITHUB_GIST_TOKEN')
+    @http_client = setup_http_client.create_gist(params)
   end
 
   private

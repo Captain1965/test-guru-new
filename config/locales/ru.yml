@@ -1,5 +1,4 @@
 ru:
-  hello: "Привет мир"
   helpers:
     submit:
       test:
@@ -21,8 +20,7 @@ ru:
       questions: "Вопросы"
       actions: "Действия" 
     test:
-      start: "старт"  
-
+      start: "старт"
   test_passages:
     result:
       header: "Тест %{title} успешно завершен!" 
@@ -30,10 +28,10 @@ ru:
     show:  
       pass: "Пройдите тест %{title} " 
       next: "Следующий"      
-    gist:
-      success: " Gist успешно сохранен"  
-      failure: "Во время сохранения gist произошла ошибка" 
-      view: "Показать Gist"
+  gists:
+    success: " Gist успешно сохранен"  
+    failure: "Во время сохранения gist произошла ошибка" 
+    view: "Показать Gist"
   shared:
     errors:
       header:

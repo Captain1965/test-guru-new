@@ -13,11 +13,12 @@ Rails.application.routes.draw do
 
     post :start, on: :member
   end
+
   resources :test_passages, only: %i[show update] do
     member do
       get :result
-      post :gist
     end
+    resources :gists, only: :create
   end
 
   namespace :admin do

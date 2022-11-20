@@ -30,14 +30,11 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
-
   helpers:
     submit:
       test:
         create: "Create test"
         update: "Update test"
-
   tests:
     index:
       header: "List tests"
@@ -46,8 +43,7 @@ en:
       questions: "Questions"
       actions: "Actions"
     test:
-      start: "Start"   
-
+      start: "Start" 
   test_passages:
     result:
       header: "The %{title} Test was Completed!" 
@@ -55,20 +51,17 @@ en:
     show:  
       pass: "Pass the test %{title} " 
       next: "Next"
-    gist:
-      success: "Gist was successfully created"  
-      failure: "An error occured while saving gist" 
-      view: "Show Gist"
-     
-
+  gist:
+    success: "Gist was successfully created"  
+    failure: "An error occured while saving gist" 
+    view: "Show Gist"
   shared:
     errors:
       header:
         one:  "%{count} error detected"
         other: "%{count} errors detected"
     flash:
-      show: "Views Gist"   
-
+      show: "Views Gist"
   admin:
     tests:
       index:
@@ -104,8 +97,7 @@ en:
         header: "List of saved questions" 
         question: "Вопрос"
         user: "Пользователь"  
-        url: "Gist url"    
-        
+        url: "Gist url"         
   tests_mailer:
     completed_test:
       subject: "You just completed the TestGuru test!"   
