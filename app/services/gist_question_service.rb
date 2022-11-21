@@ -2,7 +2,7 @@
 
 class GistQuestionService
 
-  Gist_struct = Struct.new(:gist_record, :html_url)
+  Gist_struct = Struct.new(:gist_record, :html_url, :success)
 
   def initialize(question, client = nil)
     @question = question
@@ -12,7 +12,11 @@ class GistQuestionService
 
   def call
     client = @client.create_gists(gist_params)
-    gist_new = Gist_struct.new(client, client.html_url)
+    if client.html_url != nil
+      gist_new = Gist_struct.new(client, client.html_url, true)
+    else
+      gist_new = Gist_struct.new(client,client.html_url, false)
+    end
   end
 
   private

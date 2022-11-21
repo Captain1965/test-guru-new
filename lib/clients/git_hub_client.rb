@@ -2,7 +2,6 @@
 class GitHubClient
 
   def create_gists(params)
-      ENV.fetch('GITHUB_GIST_TOKEN')
     @http_client = setup_http_client.create_gist(params)
   end
 
