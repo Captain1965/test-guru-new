@@ -4,7 +4,6 @@ class GistsController < ApplicationController
 
   def create
     result = GistQuestionService.new(@test_passage.current_question).call
-#byebug
     if result.success
       current_user.gists.create!(question: @test_passage.current_question,
                                  url: result.html_url)
