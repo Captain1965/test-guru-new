@@ -2,24 +2,26 @@
 
 class GistQuestionService
 
-  Gist_struct = Struct.new(:gist_record, :html_url, :success)
+  Gist_struct = Struct.new(:gist_record, :html_url, :success?)
 
-  def initialize(question, client = nil)
+  def initialize(question, client = default_client)
     @question = question
     @test = @question.test
-    @client = client || GitHubClient.new
+    @client = client
+    @client_html = nil
   end
 
   def call
-    client = @client.create_gists(gist_params)
-    if client.html_url != nil
-      gist_new = Gist_struct.new(client, client.html_url, true)
-    else
-      gist_new = Gist_struct.new(client,client.html_url, false)
-    end
+    client = @client.create_gist(gist_params)
+    @client_html = client.html_url
+    gist_new = Gist_struct.new(client, @client_html, success?)
   end
 
   private
+
+  def success?
+    @client_html != nil ? true : false
+  end
 
   def gist_params
     { files: { "A question about #{@test.title} from TestGuru":
@@ -28,5 +30,9 @@ class GistQuestionService
 
   def gist_content
     [@question.body, *@question.answers.pluck(:body)].join("\n")
+  end
+
+  def default_client
+    Octokit::Client.new(access_token: ENV['GITHUB_GIST_TOKEN'])
   end
 end
