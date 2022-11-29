@@ -8,7 +8,12 @@
 			<thead>		
 				<tr>
 					<th>N</th>
-					<th><%= t('.title') %></th>
+					<th class='sort-by-title pointer'>
+						<%= t('.title') %>
+						<%= octicon 'arrow-up', class: 'text-success hide' %>
+						<%= octicon 'arrow-down', class: 'text-success hide' %>
+					</th>
+
 					<th><%= t('.level') %></th>
 					<th><%= t('.questions') %></th>
 					<th colspan="4"><%= t('.actions') %></th>
@@ -20,4 +25,5 @@
 		</table>
 		<%= link_to t('.show_gist'), admin_gists_path, target: '_blank' %> 
 	</div>
+
 </div>

@@ -31,6 +31,7 @@ gem 'bootstrap', '~> 5.1.2'
 gem 'jquery-rails'
 
 gem 'octokit', '~> 5.0'
+gem 'octicons_helper'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
