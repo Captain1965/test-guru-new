@@ -1,46 +1,42 @@
 document.addEventListener('turbolinks:load', function () {
-    var control = document.querySelector('.sort-by-title')
+  var control = document.querySelector('.sort-by-title')
 
-    if (control) {
-        control.addEventListener('click', sortRowsByTitle)
+  if (control) {
+    control.addEventListener('click', sortRowsByTitle)
     }
 });
 
 function sortRowsByTitle() {
-    var table = document.querySelector('table')
+  var tableBody = document.querySelector('tbody')
 
-    // NodeList
-    // https://developer.mozilla.org/ru/docs/Web/API/NodeList
-    var rows = table.querySelectorAll('tr')
-    var sortedRows = []
+// NodeList
+// https://developer.mozilla.org/ru/docs/Web/API/NodeList
 
-    // select all table rows except the first one which is the header
-    for (var i = 1; i < rows.length; i++) {
-        sortedRows.push(rows[i])
-    }
+  var rows = tableBody.querySelectorAll('tr')
+  var sortedRows = []
 
-    if (this.querySelector('.octicon-arrow-up').classList.contains('hide')) {
-        sortedRows.sort(compareRowsAsc)
-        this.querySelector('.octicon-arrow-up').classList.remove('hide')
-        this.querySelector('.octicon-arrow-down').classList.add('hide')
-    } else {
-        sortedRows.sort(compareRowsDesc)
-        this.querySelector('.octicon-arrow-up').classList.add('hide')
-        this.querySelector('.octicon-arrow-down').classList.remove('hide')
-    }
+  for (var i = 0; i < rows.length; i++) {
+    sortedRows.push(rows[i])
+  }
 
-    var sortedTable = document.createElement('table')
-    sortedTable.classList.add('table-striped')
+  if (this.querySelector('.octicon-arrow-up').classList.contains('hide')) {
+    sortedRows.sort(compareRowsAsc)
+    this.querySelector('.octicon-arrow-up').classList.remove('hide')
+    this.querySelector('.octicon-arrow-down').classList.add('hide')
+  } else {
+    sortedRows.sort(compareRowsDesc)
+    this.querySelector('.octicon-arrow-up').classList.add('hide')
+    this.querySelector('.octicon-arrow-down').classList.remove('hide')
+  }
 
-    sortedTable.classList.add('table')
-    
-    sortedTable.appendChild(rows[0])
+  var sortedTable = document.createElement('tbody')
 
-    for (var i = 0; i < sortedRows.length; i++) {
-        sortedTable.appendChild(sortedRows[i])
-    }
+  for (var i = 0; i < sortedRows.length; i++) {
+    sortedTable.appendChild(sortedRows[i])
+  }
 
-    table.parentNode.replaceChild(sortedTable, table)
+tableBody.parentNode.replaceChild(sortedTable, tableBody)
+
 }
 
 function compareRowsAsc(row1, row2) {
