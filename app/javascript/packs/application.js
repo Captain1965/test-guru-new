@@ -8,6 +8,7 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 require("packs/sorting")
+require("packs/password")
 
 // import "jquery";
 // import "popper.js";

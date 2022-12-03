@@ -81,4 +81,18 @@ ru:
   tests_mailer:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!" 
+  devise:
+    registrations:
+      new:
+        header: "Стань Гуру" 
+        first_name: "Имя"   
+        last_name: "Фамилия"
+        password: "пароль"
+        password_confirmation: "подтверждение пароля"
+        sign_up: "Подтвердить"
+        characters_minimum: "символов минимум"
+    shared:
+      links:
+        did_not_receive_confirm_instructions: "Не получил подтверждение"    
+        did_not_receive_unlock_instructions: "Не получил инструкцию по разблокировке"
       

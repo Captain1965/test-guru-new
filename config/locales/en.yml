@@ -100,4 +100,18 @@ en:
         url: "Gist url"         
   tests_mailer:
     completed_test:
-      subject: "You just completed the TestGuru test!"   
+      subject: "You just completed the TestGuru test!" 
+  devise:
+    registrations:
+      new:
+        header: "Become Guru" 
+        first_name: "First name"   
+        last_name: "Last name"
+        password: "password"
+        password_confirmation: "password confirmation"
+        characters_minimum: "characters_minimum"
+      shared:
+        links:
+          did_not_receive_confirm_instructions: "Не получил подтверждение"    
+          did_not_receive_unlock_instructions: "Не получил инструкцию по разблокировке"
+        
