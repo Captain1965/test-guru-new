@@ -1,13 +1,14 @@
 document.addEventListener('turbolinks:load', function() {
-  var control = document.querySelector('.pass-check')
+  let control = document.querySelector('.pass-check')
+  let password = document.getElementById('user_password')
 
-  if (control) {
+  if (control) {    
     control.addEventListener('input', passCheck)
-  }
+    }
 
   function passCheck() {
-    var password = document.getElementById('user_password')
-    var confirmation = document.getElementById('user_password_confirmation')
+    
+    let confirmation = document.getElementById('user_password_confirmation')
     
     if (password.value === confirmation.value) {
       password.classList.add('border-green')
