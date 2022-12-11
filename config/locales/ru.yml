@@ -68,6 +68,8 @@ ru:
         back: "Назад"
         title: "Название"
         level: "Уровень"
+      form_inline: 
+        submit: "Ok"  
     questions:
       form:
         back: "Назад"
@@ -78,6 +80,7 @@ ru:
         question: "Вопрос"
         user: "Пользователь"  
         url: "Gist url"
+
   tests_mailer:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!" 

@@ -9,6 +9,8 @@ require("@rails/activestorage").start()
 require("channels")
 require("packs/sorting")
 require("packs/password")
+require("packs/form_inline")
+require("packs/progress_bar")
 
 // import "jquery";
 // import "popper.js";

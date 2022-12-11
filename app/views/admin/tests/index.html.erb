@@ -3,7 +3,8 @@
 		<h2><%= t('.header') %></h2>
 	</div>	
 	<div class="col-12">
-		<%= link_to t('.new'), new_admin_test_path %>
+		<%= link_to t('.new'), new_admin_test_path %>		
+		<%= render 'shared/errors', resource: @test  %>
 		<table class="table table-striped">
 			<thead>		
 				<tr>
@@ -24,5 +25,4 @@
 		</table>
 		<%= link_to t('.show_gist'), admin_gists_path, target: '_blank' %> 
 	</div>
-
 </div>

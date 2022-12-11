@@ -34,6 +34,10 @@
      test.questions.order(:id).where('id < ?', current_question.id).count + 1
    end
 
+   def progress_persent
+    current_question_position.to_f / total_test_questions * 100
+   end
+
    private
 
    def before_validation_set_question

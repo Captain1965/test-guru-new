@@ -88,6 +88,8 @@ en:
       show:
         edit: "Edit"          
         back: "Back" 
+    form_inline: 
+        submit: "Ok"      
     questions:
       form:
         back: "Back"
